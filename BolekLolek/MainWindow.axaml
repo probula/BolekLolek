@@ -13,6 +13,21 @@
                                 <RowDefinition Height="Auto"></RowDefinition>
                                 <RowDefinition Height="Auto"></RowDefinition>
                                 <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -22,6 +37,36 @@
                         <TextBlock Grid.Column="0" Grid.Row="0" Text="Nazwa zadania: " Margin="5"/>
                         <TextBox Grid.Row="0" Grid.Column="1" Width="100" Height="30" Margin="5"/>
                         <Button Content="Dodaj" Grid.Row="1"/>
+                        
+                        <TextBlock Grid.Column="0" Grid.Row="2" Text="Kto ma wykonać zadanie:" Margin="5"/>
+                        <ComboBox Grid.Row="2" Grid.Column="1" Margin="5">
+                                <ComboBoxItem Content="Bolek"/>
+                                <ComboBoxItem Content="Lolek"/>
+                        </ComboBox>
+                        
+                        <!--image-->
+                        <TextBlock Grid.Column="0" Grid.Row="3" Text="Priorytet" Margin="5"/>
+                        
+                        <TextBlock Grid.Column="0" Grid.Row="5" Text="niski (łatwe)" Margin="5"/>
+                        <RadioButton Grid.Column="1" Grid.Row="5" GroupName="Priorytet" Margin="5"/>
+                        
+                        <TextBlock Grid.Column="0" Grid.Row="6" Text="normalny (zwyłe)" Margin="5"/>
+                        <RadioButton Grid.Column="1" Grid.Row="6" GroupName="Priorytet" Margin="5"/>
+                        
+                        <TextBlock Grid.Column="0" Grid.Row="7" Text="wysoki (trudne)" Margin="5"/>
+                        <RadioButton Grid.Column="1" Grid.Row="7" GroupName="Priorytet" Margin="5"/>
+                        
+                        <TextBlock Grid.Row="8" Grid.Column="0" Text="Opis zadania" Margin="5"/>
+                        
+                        <TextBlock Grid.Row="9" Grid.Column="0" Text="Na dworze" Margin="5"/>
+                        <CheckBox Grid.Row="9" Grid.Column="1" Margin="5"/>
+                        
+                        <TextBlock Grid.Row="10" Grid.Column="0" Text="Potrzebny sprzęt" Margin="5"/>
+                        <CheckBox Grid.Row="10" Grid.Column="1" Margin="5"/>
+                        
+                        <TextBlock Grid.Row="11" Grid.Column="0" Text="Z udziałem innych kolegów" Margin="5"/>
+                        <CheckBox Grid.Row="11" Grid.Column="1" Margin="5"/>
+                        
                 </Grid>
         </StackPanel>
 </Window>
