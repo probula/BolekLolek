@@ -67,6 +67,11 @@
                         <TextBlock Grid.Row="11" Grid.Column="0" Text="Z udziałem innych kolegów" Margin="5"/>
                         <CheckBox Grid.Row="11" Grid.Column="1" Margin="5"/>
                         
+                        <TextBox Grid.Row="12" Grid.Column="0" Watermark="Dodaj miasto" Margin="5" x:Name="zadanieDodaj"/>
+                        
+                        <ListBox Grid.Row="12" Grid.Column="1" Margin="5" x:Name="zadanieLista"></ListBox>
+                                
+                        <Button Grid.ColumnSpan="2" Grid.Row="13" Content="Dodaj" HorizontalAlignment="Center" x:Name="zadanieButton"/>
                 </Grid>
         </StackPanel>
 </Window>
