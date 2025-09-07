@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Media.Imaging;
 
 namespace BolekLolek;
 
@@ -21,6 +22,15 @@ public partial class MainWindow : Window
     {
         string zadanie = zadanieDodaj.Text;
         var wykonawca = (wykonawcaComboBox.SelectedItem as ComboBoxItem).Content.ToString();
+
+        string zdjecie = wykonawca switch
+        {
+            "Bolek" => "Assets/bolek.png",
+            "Lolek" => "Assets/lolek.png",
+        };
+
+        wykonawcaZdj.Source = new Avalonia.Media.Imaging.Bitmap(zdjecie);
+        
         string priorytet = "";
         if (rb1.IsChecked == true)
         {
@@ -46,6 +56,7 @@ public partial class MainWindow : Window
         if (pomoc) zaznaczoneCB.Add("potrzebna pomoc kolegów");
         
         string opcjeCB = string.Join(", ", zaznaczoneCB);
+        
         
 
         if (!string.IsNullOrWhiteSpace(zadanie))

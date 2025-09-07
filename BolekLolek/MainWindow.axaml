@@ -43,7 +43,7 @@
                                 <ComboBoxItem Content="Lolek"/>
                         </ComboBox>
                         
-                        <!--image-->
+                       <Image Grid.Row="14" Grid.Column="0" x:Name="wykonawcaZdj" Width="100" Height="100"/>
                         
                         <TextBlock Grid.Column="0" Grid.Row="3" Text="Priorytet" Margin="5"/>
                         

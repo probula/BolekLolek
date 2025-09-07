@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6050bce2-1c26-4e5c-ade9-0ed4e1f53c00" name="Changes" comment="added checkboxes">
+    <list default="true" id="6050bce2-1c26-4e5c-ade9-0ed4e1f53c00" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BolekLolek/Assets/bolek.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BolekLolek/Assets/lolek.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BolekLolek/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BolekLolek/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BolekLolek/BolekLolek.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BolekLolek/BolekLolek.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BolekLolek/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/BolekLolek/MainWindow.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BolekLolek/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BolekLolek/MainWindow.axaml.cs" afterDir="false" />
     </list>
@@ -26,12 +29,12 @@
     &quot;assignee&quot;: &quot;probula&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/probula/BolekLolek",
-    "accountId": "32d4c6a9-1c18-40f2-82bf-4a8de7a544ce"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/probula/BolekLolek&quot;,
+    &quot;accountId&quot;: &quot;32d4c6a9-1c18-40f2-82bf-4a8de7a544ce&quot;
   }
-}]]></component>
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -92,7 +95,8 @@
       <option name="presentableId" value="Default" />
       <updated>1756986570658</updated>
       <workItem from="1756986572197" duration="1932000" />
-      <workItem from="1757271124052" duration="3312000" />
+      <workItem from="1757271124052" duration="5159000" />
+      <workItem from="1757276300499" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="added checkboxes">
       <option name="closed" value="true" />
@@ -102,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756986893274</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="after clicking the button summary appears">
+      <option name="closed" value="true" />
+      <created>1757274698560</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757274698560</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +124,7 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added checkboxes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added checkboxes" />
+    <MESSAGE value="after clicking the button summary appears" />
+    <option name="LAST_COMMIT_MESSAGE" value="after clicking the button summary appears" />
   </component>
 </project>

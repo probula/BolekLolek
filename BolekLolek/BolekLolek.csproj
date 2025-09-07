@@ -19,4 +19,9 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
     </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\bolek.png" />
+      <None Remove="Assets\lolek.png" />
+    </ItemGroup>
 </Project>
