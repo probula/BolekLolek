@@ -21,6 +21,8 @@ public partial class MainWindow : Window
         zadanieLista.DoubleTapped += usunZadanie;
 
         calendar.SelectedDatesChanged += kalendarzData;
+
+        noweOkno.Click += NoweOkno_Click;
     }
 
     private void DodajZadanie(object? sender, RoutedEventArgs e)
@@ -85,4 +87,23 @@ public partial class MainWindow : Window
             wybranaData = calendar.SelectedDate.Value;
         }
     }
+
+    private void NoweOkno_Click(object sender, RoutedEventArgs e)
+    {
+        List<string>? zadaniaDlaDaty;
+      
+        DateTime wybranaData2 = calendar2.SelectedDate.Value;
+        
+        zadaniaDlaDaty = new List<string>();
+        foreach (var zad in zadania)
+        {
+            if (zad.Contains(wybranaData2.ToShortDateString()))
+            {
+                zadaniaDlaDaty.Add(zad);
+            }
+        }
+        var window = new NoweOkno(zadaniaDlaDaty);
+        window.Show();
+    }
+    
 }
