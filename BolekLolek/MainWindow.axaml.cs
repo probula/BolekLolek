@@ -16,6 +16,8 @@ public partial class MainWindow : Window
         InitializeComponent();
         zadanieLista.ItemsSource = zadania;
         zadanieButton.Click += DodajZadanie;
+
+        zadanieLista.DoubleTapped += usunZadanie;
     }
 
     private void DodajZadanie(object? sender, RoutedEventArgs e)
@@ -65,6 +67,16 @@ public partial class MainWindow : Window
 
             string tekst = $"{wykonawca} - {nazwaZ}, priorytet: {priorytet}. Dodatkowe informacje: {opcjeCB}";
             zadania.Add(tekst);
+        }
+        
+       
+    }
+
+    private void usunZadanie(object? sender, RoutedEventArgs e)
+    {
+        if (zadanieLista.SelectedItem is string zadanie)
+        {
+            zadania.Remove(zadanie);
         }
     }
 }
