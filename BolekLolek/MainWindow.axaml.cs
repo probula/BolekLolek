@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Avalonia.Controls;
@@ -18,11 +19,12 @@ public partial class MainWindow : Window
         zadanieButton.Click += DodajZadanie;
 
         zadanieLista.DoubleTapped += usunZadanie;
+
+        calendar.SelectedDatesChanged += kalendarzData;
     }
 
     private void DodajZadanie(object? sender, RoutedEventArgs e)
     {
-        string zadanie = zadanieDodaj.Text;
         var wykonawca = (wykonawcaComboBox.SelectedItem as ComboBoxItem).Content.ToString();
 
         string zdjecie = wykonawca switch
@@ -59,17 +61,11 @@ public partial class MainWindow : Window
         
         string opcjeCB = string.Join(", ", zaznaczoneCB);
         
-        
+        string nazwaZ = nazwaZadania.Text;
 
-        if (!string.IsNullOrWhiteSpace(zadanie))
-        {
-            string nazwaZ = nazwaZadania.Text;
-
-            string tekst = $"{wykonawca} - {nazwaZ}, priorytet: {priorytet}. Dodatkowe informacje: {opcjeCB}";
-            zadania.Add(tekst);
-        }
+        string tekst = $"{wykonawca} - {nazwaZ}, priorytet: {priorytet}. Dodatkowe informacje: {opcjeCB}, data: {wybranaData}";
+        zadania.Add(tekst);
         
-       
     }
 
     private void usunZadanie(object? sender, RoutedEventArgs e)
@@ -77,6 +73,16 @@ public partial class MainWindow : Window
         if (zadanieLista.SelectedItem is string zadanie)
         {
             zadania.Remove(zadanie);
+        }
+    }
+
+    private DateTime? wybranaData;
+    private void kalendarzData(object sender, Avalonia.Controls.SelectionChangedEventArgs e)
+    {
+        
+        if (calendar.SelectedDate.HasValue)
+        {
+            wybranaData = calendar.SelectedDate.Value;
         }
     }
 }

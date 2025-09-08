@@ -28,8 +28,13 @@
                                 <RowDefinition Height="Auto"></RowDefinition>
                                 <RowDefinition Height="Auto"></RowDefinition>
                                 <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
@@ -43,7 +48,6 @@
                                 <ComboBoxItem Content="Lolek"/>
                         </ComboBox>
                         
-                       <Image Grid.Row="14" Grid.Column="0" x:Name="wykonawcaZdj" Width="100" Height="100"/>
                         
                         <TextBlock Grid.Column="0" Grid.Row="3" Text="Priorytet" Margin="5"/>
                         
@@ -67,11 +71,16 @@
                         <TextBlock Grid.Row="11" Grid.Column="0" Text="Z udziałem innych kolegów" Margin="5"/>
                         <CheckBox Grid.Row="11" Grid.Column="1" Margin="5" x:Name="Koledzy"/>
                         
-                        <TextBox Grid.Row="12" Grid.Column="0" Watermark="Dodaj miasto" Margin="5" x:Name="zadanieDodaj"/>
+                        <TextBlock Grid.Row="12" Grid.Column="0" Text="Przypisz date do zadania:" Margin="5"/>
+                        <Calendar Grid.Row="12" Grid.Column="1" x:Name="calendar" SelectionMode="SingleDate" SelectedDatesChanged="kalendarzData"/>
                         
-                        <ListBox Grid.Row="12" Grid.Column="1" Margin="5" x:Name="zadanieLista"></ListBox>
+                        <ListBox Grid.Row="13" Grid.Column="1" Margin="5" x:Name="zadanieLista"></ListBox>
+                        
+                        <Image Grid.Row="13" Grid.Column="0" x:Name="wykonawcaZdj" Width="100" Height="100"/>
                                 
-                        <Button Grid.ColumnSpan="2" Grid.Row="13" Content="Dodaj" HorizontalAlignment="Center" x:Name="zadanieButton"/>
+                        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="14" Content="Dodaj" HorizontalAlignment="Center" x:Name="zadanieButton"/>
+                        
+                 
                 </Grid>
         </StackPanel>
 </Window>
