@@ -86,24 +86,35 @@ public partial class MainWindow : Window
         {
             wybranaData = calendar.SelectedDate.Value;
         }
+        else
+        {
+            wybranaData = null;
+        }
     }
 
     private void NoweOkno_Click(object sender, RoutedEventArgs e)
     {
         List<string>? zadaniaDlaDaty;
-      
-        DateTime wybranaData2 = calendar2.SelectedDate.Value;
-        
-        zadaniaDlaDaty = new List<string>();
-        foreach (var zad in zadania)
+
+        if (calendar2.SelectedDate.HasValue)
         {
-            if (zad.Contains(wybranaData2.ToShortDateString()))
+
+            DateTime wybranaData2 = calendar2.SelectedDate.Value;
+
+            zadaniaDlaDaty = new List<string>();
+            foreach (var zad in zadania)
             {
-                zadaniaDlaDaty.Add(zad);
+                if (zad.Contains(wybranaData2.ToShortDateString()))
+                {
+                    zadaniaDlaDaty.Add(zad);
+                }
             }
+
+            var window = new NoweOkno(zadaniaDlaDaty);
+            window.Show();
         }
-        var window = new NoweOkno(zadaniaDlaDaty);
-        window.Show();
+        else{
+            Console.WriteLine("Brak danych!");
+        }
     }
-    
 }
