@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="BolekLolek/MainWindow.axaml" value="BolekLolek/BolekLolek.csproj" />
+        <entry key="BolekLolek/NoweOkno.axaml" value="BolekLolek/BolekLolek.csproj" />
       </map>
     </option>
   </component>

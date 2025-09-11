@@ -28,14 +28,7 @@ public partial class MainWindow : Window
     private void DodajZadanie(object? sender, RoutedEventArgs e)
     {
         var wykonawca = (wykonawcaComboBox.SelectedItem as ComboBoxItem).Content.ToString();
-
-        string zdjecie = wykonawca switch
-        {
-            "Bolek" => "Assets/bolek.png",
-            "Lolek" => "Assets/lolek.png",
-        };
-
-        wykonawcaZdj.Source = new Avalonia.Media.Imaging.Bitmap(zdjecie);
+        
         
         string priorytet = "";
         if (rb1.IsChecked == true)
@@ -116,5 +109,17 @@ public partial class MainWindow : Window
         else{
             Console.WriteLine("Brak danych!");
         }
+    }
+
+    private void WykonawcaComboBox_OnSelectionChanged(object? sender, SelectionChangedEventArgs e)
+    {
+        var wykonawca = (wykonawcaComboBox.SelectedItem as ComboBoxItem).Content.ToString();
+        string zdjecie = wykonawca switch
+        {
+            "Bolek" => "Assets/bolek.png",
+            "Lolek" => "Assets/lolek.png",
+        };
+
+        wykonawcaZdj.Source = new Avalonia.Media.Imaging.Bitmap(zdjecie);
     }
 }

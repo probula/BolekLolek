@@ -24,4 +24,12 @@
       <None Remove="Assets\bolek.png" />
       <None Remove="Assets\lolek.png" />
     </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Include="Assets\lolek.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Include="Assets\bolek.png" />
+    </ItemGroup>
 </Project>

@@ -42,14 +42,17 @@
                                         <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                         
-                                <TextBlock Grid.Column="0" Grid.Row="0" Text="Nazwa zadania: " Margin="5"/>
-                                <TextBox Grid.Row="0" Grid.Column="1" Height="30" Margin="5" x:Name="nazwaZadania"/>
+                                <TextBlock Grid.Column="0" Grid.Row="0" Text="Nazwa zadania: "/>
+                                <TextBox Grid.Row="0" Grid.Column="1" Height="30" x:Name="nazwaZadania"/>
                                 
-                                <TextBlock Grid.Column="0" Grid.Row="2" Text="Kto ma wykonać zadanie:" Margin="5"/>
-                                <ComboBox Grid.Row="2" Grid.Column="1" Margin="5" x:Name="wykonawcaComboBox">
+                                <TextBlock Grid.Column="0" Grid.Row="2" Text="Kto ma wykonać zadanie:"/>
+                                
+                                <Image Grid.Row="2" Grid.Column="2" x:Name="wykonawcaZdj" Width="100" Height="100"/>
+                                <ComboBox Grid.Row="2" Grid.Column="1" x:Name="wykonawcaComboBox" SelectionChanged="WykonawcaComboBox_OnSelectionChanged">
                                         <ComboBoxItem Content="Bolek"/>
                                         <ComboBoxItem Content="Lolek"/>
                                 </ComboBox>
+                                
                                 
                                 
                                 <TextBlock Grid.Column="0" Grid.Row="3" Text="Priorytet" Margin="5"/>
@@ -79,7 +82,7 @@
                                 
                                 <ListBox Grid.Row="13" Grid.Column="1" Margin="5" x:Name="zadanieLista"></ListBox>
                                 
-                                <Image Grid.Row="13" Grid.Column="0" x:Name="wykonawcaZdj" Width="100" Height="100"/>
+                                <!--><Image Grid.Row="13" Grid.Column="0" x:Name="wykonawcaZdj" Width="100" Height="100"/>-->
                                         
                                 <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="14" Content="Dodaj" HorizontalAlignment="Center" x:Name="zadanieButton"/>
                                 
